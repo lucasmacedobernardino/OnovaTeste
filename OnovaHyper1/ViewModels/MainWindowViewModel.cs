@@ -25,7 +25,7 @@ namespace OnovaHyper1.ViewModels
         private readonly UpdateManager _updateManager;
         public MainWindowViewModel()
         {
-            upMg = "OnovaHyperCube 2";
+            upMg = "OnovaHyperCube 1";
             greeting = "Aperte no botão";
             VerificarUpdate = new RelayCommand(InitializeAsync);
             _updateManager = new UpdateManager(
