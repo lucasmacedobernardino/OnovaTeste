@@ -25,12 +25,13 @@ namespace OnovaHyper1.ViewModels
         private readonly UpdateManager _updateManager;
         public MainWindowViewModel()
         {
-            upMg = "OnovaHyperCube 1";
+            upMg = "OnovaHyperCube 2";
             greeting = "Aperte no botão";
             VerificarUpdate = new RelayCommand(InitializeAsync);
             _updateManager = new UpdateManager(
-            new LocalPackageResolver("c:\\test\\packages", "hyper-v*.zip"),
-            new ZipPackageExtractor());
+            new GithubPackageResolver("lucasmacedobernardino", "OnovaTeste", "Onova.zip"),
+        new ZipPackageExtractor()
+    );
         }
         private async void InitializeAsync()
         {
